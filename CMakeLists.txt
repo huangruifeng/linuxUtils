@@ -11,12 +11,12 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 set(SOURCE_DIRECTORY ${PROJECT_SOURCE_DIR}/src)
+include_directories(${SOURCE_DIRECTORY}/include)
 
-include_directories(${PROJECT_SOURCE_DIR}/threadPool)
 
 list(APPEND source
-     ${SOURCE_DIRECTORY}/process.h
-     ${SOURCE_DIRECTORY}/prcess.cpp
+     ${SOURCE_DIRECTORY}/include/process.h
+     ${SOURCE_DIRECTORY}/source/process.cpp
     )
 
 add_library(utils ${source})
